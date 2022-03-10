@@ -3,10 +3,21 @@
 @{
     ViewData["Title"] = "F1 2022 Countdown";
 }
+<!--<link rel="shortcut icon" type="image/x-icon" href="~/logo.ico" />-->
 
-<iframe src="https://streamable.com/e/osi0gc?autoplay=1&nocontrols=1" style="position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
-    Your browser doesn't support iframes
-</iframe>
+<link rel="icon" href="~/flag.gif" type="image/gif" >
 
-<link rel="shortcut icon" type="image/x-icon" href="~/logo.ico" />
+<p class="f1" id="paraText"><wide>FORMULA 1 </wide><white>Countdown</white>  <br /><br /> <whiteDelay>@Model.sCurrentRaceName</whiteDelay></p>
+<p class ="f1"> <whiteDelay>@Model.sCountdown </whiteDelay></p>
+
+<audio autoplay id="bkgAudio" loop>
+    <source src="~/audio.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  var audio = document.getElementById("bkgAudio");
+  audio.volume = 0.2;
+</script>
+
+
 
