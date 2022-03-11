@@ -1,23 +1,33 @@
 ﻿@page
+@using F1Countdown.Pages
+@using System.Threading;
 @model IndexModel
 @{
-    ViewData["Title"] = "F1 2022 Countdown";
+    // Setting Page Title
+    ViewData["Title"] = "F1 2022 Countdown";   
 }
-<!--<link rel="shortcut icon" type="image/x-icon" href="~/logo.ico" />-->
 
+<!-- Setting Page Icon, Either Static Or Animated Gif />-->
+<!--<link rel="shortcut icon" type="image/x-icon" href="~/logo.ico" />-->
 <link rel="icon" href="~/flag.gif" type="image/gif" >
 
-<p class="f1" id="paraText"><wide>FORMULA 1 </wide><white>Countdown</white>  <br /><br /> <whiteDelay>@Model.sCurrentRaceName</whiteDelay></p>
-<p class ="f1"> <whiteDelay>@Model.sCountdown </whiteDelay></p>
+<!-- Main Body Text />-->
+<p class="f1" id="paraText"><wide>FORMULA 1 </wide><wideWhitegit>Round @Model.iCurrentRound</wideWhite>  <br /><br /> <whiteDelay>@Model.sCurrentRaceName</whiteDelay></p>
+<p id="countdowntext" class ="f1"> <whiteDelay> @Model.sCountdown  </whiteDelay></p>
+<p class ="f1WhiteDelaySmall">  Lights Out @Model.sCurrentDate at @Model.sCurrentTime.TrimEnd('Z')  </p>
 
+
+<!-- Enabling Audio To Autoplay (Must be enabled in browser)/>-->
 <audio autoplay id="bkgAudio" loop>
     <source src="~/audio.mp3" type="audio/mpeg">
 </audio>
 
+<!--Adjusting Volume On Start />-->
 <script>
   var audio = document.getElementById("bkgAudio");
   audio.volume = 0.2;
 </script>
+
 
 
 

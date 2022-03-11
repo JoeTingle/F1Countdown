@@ -43,6 +43,12 @@ p.f1 wide {
     color: red;
 }
 
+p.f1 wideWhite {
+    font-family: "F1 Wide", Verdana, Tahoma;
+    color: white;
+    opacity: 0.8;
+}
+
 p.f1 white {
     font-family: "F1 Regular", Verdana, Tahoma;
     color: white;
@@ -52,6 +58,16 @@ p.f1 whiteDelay {
     font-family: "F1 Regular", Verdana, Tahoma;
     color: white;
     animation: fadeIn linear 10s;
+}
+
+p.f1WhiteDelaySmall {
+    font-family: "F1 Regular", Verdana, Tahoma;
+    font-size: 1vw;
+    color: red;
+    text-align: center;
+    padding-top: 0vw;
+    opacity: 0.5;
+    animation: fadeInHalf linear 2s;
 }
 
 @font-face {
@@ -72,6 +88,16 @@ p.f1 whiteDelay {
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes fadeInHalf {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.5;
     }
 }
 
