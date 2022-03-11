@@ -10,4 +10,4 @@ To view the web app in its current version [Click Here](https://f1countdown20220
 ## Current Features
 - [x] Display time (In days / hours) untill the next round in the 2022 F1 season
 - [x] Play F1 theme in background (Depending on browser support for autoplay) 
-- [] Auto update to next round after race finish
+- [ ] Auto update to next round after race finish
