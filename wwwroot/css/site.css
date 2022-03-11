@@ -1,0 +1,142 @@
+html {
+  font-size: 14px;
+  background-color:black;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    background-color: black;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: black;
+}
+
+.video-container iframe
+{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+p.f1 {
+    font-family: "F1 Regular", Verdana, Tahoma;
+    font-size: 3vw;
+    color: red;
+    text-align: center;
+    padding-top: 2vw;
+    animation: fadeIn linear 2s;
+}
+
+p.f1 wide {
+    font-family: "F1 Wide", Verdana, Tahoma;
+    color: red;
+}
+
+p.f1 wideWhite {
+    font-family: "F1 Wide", Verdana, Tahoma;
+    color: white;
+    opacity: 0.8;
+}
+
+p.f1 white {
+    font-family: "F1 Regular", Verdana, Tahoma;
+    color: white;
+}
+
+p.f1 whiteDelay {
+    font-family: "F1 Regular", Verdana, Tahoma;
+    color: white;
+    animation: fadeIn linear 10s;
+}
+
+p.f1WhiteDelaySmall {
+    font-family: "F1 Regular", Verdana, Tahoma;
+    font-size: 1vw;
+    color: red;
+    text-align: center;
+    padding-top: 0vw;
+    opacity: 0.5;
+    animation: fadeInHalf linear 2s;
+}
+
+@font-face {
+    font-family: "F1 Regular";
+    src: url(https://www.formula1.com/etc/designs/fom-website/fonts/F1Regular/Formula1-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "F1 Wide";
+    src: url(https://www.formula1.com/etc/designs/fom-website/fonts/F1Wide/Formula1-Wide.ttf) format("truetype");
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInHalf {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
