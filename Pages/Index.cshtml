@@ -12,9 +12,9 @@
 <link rel="icon" href="~/flag.gif" type="image/gif" >
 
 <!-- Main Body Text />-->
-<p class="f1" id="paraText"><wide>FORMULA 1 </wide><wideWhitegit>Round @Model.iCurrentRound</wideWhite>  <br /><br /> <whiteDelay>@Model.sCurrentRaceName</whiteDelay></p>
+<p class="f1" id="paraText"><wide>FORMULA 1 </wide><wideWhite>Round @Model.iCurrentRound</wideWhite>  <br /><br /> <whiteDelay>@Model.sCurrentRaceName</whiteDelay></p>
 <p id="countdowntext" class ="f1"> <whiteDelay> @Model.sCountdown  </whiteDelay></p>
-<p class ="f1WhiteDelaySmall">  Lights Out @Model.sCurrentDate at @Model.sCurrentTime.TrimEnd('Z')  </p>
+<p class ="f1WhiteDelaySmall">  Lights Out @Model.sCurrentDate at @Model.sCurrentTime.TrimEnd('Z') </p>
 
 
 <!-- Enabling Audio To Autoplay (Must be enabled in browser)/>-->
@@ -26,6 +26,23 @@
 <script>
   var audio = document.getElementById("bkgAudio");
   audio.volume = 0.2;
+
+  
+
+var countDownDate = new Date("@Model.sMonth/@Model.sDay/@Model.sYear @Model.sHour:@Model.sMinute:00").getTime();
+    setInterval(function() 
+    {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+        document.getElementById("countdowntext").innerHTML = days + " Days " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds";
+    }, 1000);
 </script>
 
 

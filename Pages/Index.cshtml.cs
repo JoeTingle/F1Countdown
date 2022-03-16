@@ -21,10 +21,10 @@ namespace F1Countdown.Pages
         [BindProperty]
         public string sCountdown { get; set; }
 
-        private string sDay = "";
-        private string sMonth = "";
-        private string sYear = "";
-        private string[] date;
+        public string sDay = "";
+        public string sMonth = "";
+        public string sYear = "";
+        public string[] date;
 
         private int iDay = 0;
         private int iMonth = 0;
@@ -32,8 +32,8 @@ namespace F1Countdown.Pages
         public int iHour = 0;
         public int iMin = 0;
 
-        private string sHour = "";
-        private string sMinute = "";
+        public string sHour = "";
+        public string sMinute = "";
         private string[] time;
 
         private static System.Timers.Timer UpdateTimer;
@@ -41,11 +41,6 @@ namespace F1Countdown.Pages
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
-
-            //Ready For Timer
-            //UpdateTimer = new System.Timers.Timer(1000);
-            //UpdateTimer.Elapsed += Update;
-            //UpdateTimer.Enabled = true;
 
             APICall();
 
@@ -77,27 +72,13 @@ namespace F1Countdown.Pages
             DateTime end = new DateTime(iYear, iMonth, iDay, iHour, iMin, 0);
             int result = DateTime.Compare(t, end);
             TimeSpan timeSpan = end.Subtract(t);
-            sCountdown = timeSpan.Days + " Days " + timeSpan.Hours + " Hours "; // + timeSpan.Minutes + " Minutes " + timeSpan.Seconds + " Seconds";
+            sCountdown = timeSpan.Days + " Days " + timeSpan.Hours + " Hours " + timeSpan.Minutes + " Minutes " + timeSpan.Seconds + " Seconds";
         }
 
         public void OnGet()
         {
             ViewData["Message"] = "Welcome to my page!";
             ViewData["Date"] = DateTime.Now;
-        }
-
-        public void Update(Object source, System.Timers.ElapsedEventArgs e)
-        {
-            DateTime t = DateTime.Now;
-            DateTime end = new DateTime(iYear, iMonth, iDay, iHour, iMin, 0);
-            int result = DateTime.Compare(t, end);
-            TimeSpan timeSpan = end.Subtract(t);
-            sCountdown = timeSpan.Days + " Days " + timeSpan.Hours + " Hours " + timeSpan.Minutes + " Minutes " + timeSpan.Seconds + " Seconds";
-        }
-
-        public string UpdateCountdownText()
-        {
-            return sCountdown;
         }
 
         public void APICall()
