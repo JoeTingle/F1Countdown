@@ -29,6 +29,14 @@ body {
     height:100%;
 }
 
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    animation: fadeIn linear 3.5s;
+}
+
 p.f1 {
     font-family: "F1 Regular", Verdana, Tahoma;
     font-size: 3vw;
