@@ -33,14 +33,15 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 35%;
-    animation: fadeIn linear 3.5s;
+    width: 20%;
+    opacity: 50%;
+    animation: fadeInHalf linear 3.5s;
 }
 
 p.f1 {
     font-family: "F1 Regular", Verdana, Tahoma;
     font-size: 3vw;
-    color: red;
+    color: #FF1801;
     text-align: center;
     padding-top: 2vw;
     animation: fadeIn linear 2s;
@@ -72,6 +73,16 @@ p.f1WhiteDelaySmall {
     font-family: "F1 Regular", Verdana, Tahoma;
     font-size: 1vw;
     color: red;
+    text-align: center;
+    padding-top: 0vw;
+    opacity: 0.5;
+    animation: fadeInHalf linear 2s;
+}
+
+p.f1PurpleDelaySmall {
+    font-family: "F1 Regular", Verdana, Tahoma;
+    font-size: 1vw;
+    color: #E829F1;
     text-align: center;
     padding-top: 0vw;
     opacity: 0.5;

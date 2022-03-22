@@ -9,12 +9,13 @@
 
 <!-- Setting Page Icon, Either Static Or Animated Gif />-->
 <link rel="shortcut icon" type="image/x-icon" href="~/logo.ico" />
-<!--<link rel="icon" href="~/flag.gif" type="image/gif" >-->
 
 <!-- Main Body Text />-->
 <p class="f1" id="paraText"><wide>FORMULA 1 </wide><wideWhite>Round @Model.iCurrentRound</wideWhite>  <br /><br /> <whiteDelay>@Model.sCurrentRaceName</whiteDelay></p>
 <p id="countdowntext" class ="f1"> <whiteDelay> @Model.sCountdown  </whiteDelay></p>
-<p class ="f1WhiteDelaySmall">  Lights Out @Model.sCurrentDate at @Model.sCurrentTime.TrimEnd('Z') </p>
+<p class ="f1PurpleDelaySmall">  Lights Out @Model.sCurrentDate at @Model.sCurrentTime.TrimEnd('Z') </p>
+<p class ="f1PurpleDelaySmall">  FP1 at @Model.sFP1Date - @Model.sFP1Time.TrimEnd('Z')</p>
+<p class ="f1PurpleDelaySmall">  Qualifying at @Model.sQualiDate - @Model.sQualiTime.TrimEnd('Z') </p>
 <p> <br /></p>
 
 <img src="~/F1Tyres.png" class="image" />

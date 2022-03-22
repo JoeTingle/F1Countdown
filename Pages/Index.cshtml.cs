@@ -11,11 +11,16 @@ namespace F1Countdown.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
-        public int iCurrentRound = 1;
+        public int iCurrentRound = 2;
         public string sCurrentRaceName = "Default";
         public string sCurrentCircuit = "Default";
         public string sCurrentDate = "Default";
         public string sCurrentTime = "Default";
+        public string sFP1Date = "Default";
+        public string sFP1Time = "Default";
+        public string sQualiDate = "Default";
+        public string sQualiTime = "Default";
+
 
 
         [BindProperty]
@@ -107,6 +112,18 @@ namespace F1Countdown.Pages
                     sCurrentCircuit = (string)xElements.ElementAt(1);
                     sCurrentDate = (string)xElements.ElementAt(2);
                     sCurrentTime = (string)xElements.ElementAt(3);
+                    IEnumerable<XElement> FPElements = xElements.ElementAt(4).Elements();
+                    if(FPElements != null)
+                    {
+                        sFP1Date = (string)FPElements.ElementAt(0);
+                        sFP1Time = (string)FPElements.ElementAt(1);
+                    }
+                    IEnumerable<XElement> QualiElements = xElements.ElementAt(7).Elements();
+                    if (QualiElements != null)
+                    {
+                        sQualiDate = (string)QualiElements.ElementAt(0);
+                        sQualiTime = (string)QualiElements.ElementAt(1);
+                    }
                 }
             }
 
